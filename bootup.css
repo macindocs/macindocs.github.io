@@ -8,7 +8,9 @@
 html {
   background-color: black;
 }
-logo {
+.logo {
   position: relative;
-  top: 20%
+  top: 20%;
+  width: 100px;
+  height: 100px;
 }
