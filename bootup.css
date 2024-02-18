@@ -16,14 +16,13 @@ html {
 }
 .bar {
   border-radius: 5px;
-  border: 1px solid lightgrey;
-  background: grey;
   padding: 0px; 
-  width: 300px;
   height: 6px; 
 }
 #macProgress {
-  background-color: #ddd;
+  border: 1px solid lightgrey;
+  background-color: #888888;
+  width: 300px;
 }
 
 #macBar {
