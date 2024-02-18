@@ -1,5 +1,3 @@
-window.logo = document.getElementsByClassName("logo")[0];
-
 var i = 0;
 
 document.documentElement.addEventListener("click", function() {
@@ -9,7 +7,7 @@ document.documentElement.addEventListener("click", function() {
 function move() {
   if (i == 0) {
     i = 1;
-    logo.style.opacity = "1";
+    document.documentElement.style.opacity = "1";
     playSound("./assets/latest-boot.m4a", false);
     var elem = document.getElementById("macBar");
     elem.style.opacity = "1";
