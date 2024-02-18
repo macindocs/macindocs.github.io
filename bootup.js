@@ -1,4 +1,4 @@
-var logo = document.getElementsByClassName("logo")[0];
+window.logo = document.getElementsByClassName("logo")[0];
 
 var i = 0;
 
