@@ -9,6 +9,7 @@ html {
 }
 .logo {
   position: relative;
+  opacity: 0;
   top: 100px;
   width: 100px;
   height: 100px;
