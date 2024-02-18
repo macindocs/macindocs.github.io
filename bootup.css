@@ -14,6 +14,11 @@ html {
   width: 100px;
   height: 100px;
 }
+.barContainer {
+  position: relative;
+  top: 500px;
+  width: 100% !important;
+}
 .bar {
   border-radius: 5px;
   padding: 0px; 
