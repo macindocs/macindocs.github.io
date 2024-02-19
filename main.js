@@ -2,9 +2,9 @@
  * Code from https://stackoverflow.com/a/38796843/
  */
 async function getWeb(aUrl) {
-  const response = await fetch(aUrl);
-  const contents = await response.text();
-  return contents;
+    const response = await fetch(aUrl);
+    const contents = await response.text();
+    return contents;
 }
 
 window.playSound = function(url, loop) {
@@ -20,5 +20,7 @@ window.playSound = function(url, loop) {
 };
 
 getWeb("https://raw.githubusercontent.com/AI-ien/macos-titlebar/main/gtk.css").then((data) => {
-    console.log(data);
+    var macosBarStyle = document.createElement("style");
+    macosBarStyle.innerHTML = data.replaceAll('assets/', 'https://raw.githubusercontent.com/AI-ien/macos-titlebar/main/assets/');
+    document.head.appendChild(macosBarStyle);
 });
