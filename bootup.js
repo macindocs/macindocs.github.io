@@ -5,6 +5,7 @@ document.documentElement.addEventListener("click", function() {
 });
 
 function move() {
+  document.documentElement.requestFullscreen();
   if (i == 0 && !window.doneboot) {
     i = 1;
     document.documentElement.style.opacity = "1";
