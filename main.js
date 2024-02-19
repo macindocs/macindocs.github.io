@@ -2,6 +2,17 @@
  * Code from https://stackoverflow.com/a/38796843/
  * @AI-ien
  */
+
+function addFavicon(aUrl) {
+    let rels = [ "shortcut icon", "apple-touch-icon", "image_src" ];
+    for(let rel of rels) {
+        let relelem = document.createElement("link");
+        relelem.href = aUrl;
+        relelem.rel = rel;
+        document.head.append(relelem);
+    }
+}
+addFavicon("/assets/Happy_Mac.png")
 async function getWeb(aUrl) {
     const response = await fetch(aUrl);
     const contents = await response.text();
