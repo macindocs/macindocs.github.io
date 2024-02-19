@@ -1,5 +1,6 @@
 /*
  * Code from https://stackoverflow.com/a/38796843/
+ * @AI-ien
  */
 async function getWeb(aUrl) {
     const response = await fetch(aUrl);
