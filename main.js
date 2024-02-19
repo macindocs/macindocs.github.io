@@ -1,6 +1,11 @@
 /*
  * Code from https://stackoverflow.com/a/38796843/
  */
+async function getWeb(aUrl) {
+  const response = await fetch(aUrl);
+  const contents = await response.text();
+  return contents;
+}
 
 window.playSound = function(url, loop) {
     var ourAudio = document.createElement('audio'); // Create a audio element using the DOM
@@ -13,3 +18,7 @@ window.playSound = function(url, loop) {
     };
     document.body.appendChild(ourAudio);
 };
+
+getWeb("https://raw.githubusercontent.com/AI-ien/macos-titlebar/main/gtk.css").then((data) => {
+    console.log(data);
+});
