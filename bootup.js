@@ -1,11 +1,11 @@
 var i = 0;
-
+window.doneboot = false;
 document.documentElement.addEventListener("click", function() {
   move();
 });
 
 function move() {
-  if (i == 0) {
+  if (i == 0 && !window.doneboot) {
     i = 1;
     document.documentElement.style.opacity = "1";
     playSound("./assets/latest-boot.m4a", false);
@@ -16,6 +16,7 @@ function move() {
     function frame() {
       if (width >= 100) {
         clearInterval(id);
+        window.doneboot = true;
         i = 0;
       } else {
         width++;
